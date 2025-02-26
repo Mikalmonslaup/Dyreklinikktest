@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestill Time - Stavanger Dyreklinikk</title>
+    <meta name="description" content="Bestill time hos Stavanger Dyreklinikk for vaksinasjon, helsesjekk, og akutt hjelp.">
+    <meta name="keywords" content="bestill veterinær, dyreklinikk bestilling, hund, katt, veterinær stavanger">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.png.png" alt="Stavanger Dyreklinikk">
+            <h1>Bestill Time</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="bestilling.html">Booking</a></li>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="behandlinger.html">Behandlinger og Priser</a></li>
+                <li><a href="Omoss.html">Om Oss</a></li>
+                <li><a href="akutt.html">Akutt Hjelp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="booking-form">
+        <h2>Bestill Time</h2>
+        <p>Fyll ut skjemaet nedenfor for å bestille time hos oss.</p>
+
+        <form id="bookingForm">
+            <label for="name">Navn:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">E-post:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefon:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="service">Velg tjeneste:</label>
+            <select id="service" name="service" required>
+                <option value="vaksinasjon">Vaksinasjon</option>
+                <option value="helsekontroll">Helsekontroll</option>
+                <option value="kirurgi">Kirurgi</option>
+                <option value="annet">Annet</option>
+            </select>
+
+            <label for="message">Ekstra informasjon:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">Send Bestilling</button>
+        </form>
+
+        <p id="responseMessage" style="display:none;"></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Stavanger Dyreklinikk. Alle rettigheter reservert.</p>
+    </footer>
+
+    <script src="booking.js"></script>
+</body>
+</html>

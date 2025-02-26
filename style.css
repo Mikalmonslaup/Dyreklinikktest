@@ -1,0 +1,547 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+}
+
+/* Align logo and text horizontally */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style the logo image */
+.logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Style the header title */
+.logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background-color: #e6f7ff;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #005fa3;
+}
+
+.search-box .emergency-badge {
+    color: red;
+    font-weight: bold;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.quick-access {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.quick-access .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.quick-access .card:hover {
+    transform: translateY(-10px);
+}
+
+/* Cards Section - Updated */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.card {
+    width: 300px; /* Increased width */
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 400px !important; /* Force increased height */
+    object-fit: cover; /* Ensures image fills space without distortion */
+    border-radius: 8px 8px 0 0;
+}
+
+.card h3 {
+    margin: 1rem 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #e6f7ff;
+}
+
+.categories .category {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.categories .category:hover {
+    transform: translateY(-10px);
+}
+
+.categories img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+    margin-top: 40px;
+}
+footer a {
+    color: white;
+    font-size: 24px; /* Adjust size */
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #ffcc00; /* Change to any color when hovered */
+}
+/* Behandlinger Page - Treatment Dropdown Styling */
+.treatment-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* Clickable Treatment Categories */
+.treatment-category {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.treatment-category {
+    cursor: pointer; /* Ensures it's clickable */
+    user-select: none; /* Prevents text selection */
+}
+.treatment-category:hover, .treatment-category.active {
+    background-color: #e6f7ff;
+    transform: scale(1.02);
+}
+.treatment-list {
+    display: none !important; /* Ensures it's fully hidden initially */
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-out, max-height 0.3s ease-out;
+}
+
+/* Ensure dropdown appears when .active is applied */
+.treatment-list.active {
+    display: flex !important; /* Forces visibility */
+    opacity: 1 !important; /* Ensures it’s fully visible */
+    max-height: 1000px !important; /* Forces it to expand */
+}
+
+.treatment-item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.treatment-item:hover {
+    background-color: #f0f8fa;
+}
+
+
+/* Sub-treatment Details (Text + Image) */
+.treatment-details {
+    display: none;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    text-align: center;
+}
+
+.treatment-details img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.treatment-details.active {
+    display: block;
+}
+
+/* Hide treatment details by default */
+.treatment-details {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 5px;
+    text-align: center;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Show treatment details when active */
+.treatment-details.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Style treatment images */
+.treatment-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.treatment-details {
+    display: none;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    text-align: center;
+}
+
+.treatment-details img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Show sub-details when active */
+.treatment-details.active {
+    display: block;
+}
+/* Bestillingsside - Booking Form */
+.booking-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.booking-form h2 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.booking-form p {
+    font-size: 16px;
+    color: #555;
+}
+
+.booking-form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #003366;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: #007acc;
+    outline: none;
+}
+
+.booking-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.booking-form button {
+    width: 100%;
+    padding: 12px;
+    background: #007acc;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.booking-form button:hover {
+    background: #005fa3;
+}
+/* Om Oss - Styling */
+.about-us {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.about-us p {
+    font-size: 18px;
+    color: #555;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    color: #003366;
+}
+
+/* Akutt Hjelp - Styling */
+.emergency-info {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background: #fff3f3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);
+}
+
+.emergency-info h2 {
+    color: #d9534f;
+}
+
+.emergency-contact {
+    margin-top: 20px;
+    padding: 10px;
+    background: #ffe5e5;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.emergency-contact p {
+    font-size: 18px;
+}
+
+.emergency-steps {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.emergency-steps ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.emergency-steps li {
+    background: url('images/checkmark.svg') left center no-repeat;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 16px;
+}
+
+/* Responsivt design */
+@media (max-width: 768px) {
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .emergency-info {
+        width: 90%;
+    }
+}
+
+
+/* Responsivt design for mobil */
+@media (max-width: 768px) {
+    .booking-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .booking-form button {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .quick-access, .categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+}
+
+
+
+
