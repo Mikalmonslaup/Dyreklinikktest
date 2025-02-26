@@ -592,6 +592,85 @@ nav ul li a {
         flex-direction: column;
     }
 }
+/* ✅ Mobilvennlig header med sentrert tittel og dropdown-meny */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        position: relative;
+    }
+
+    .logo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem; /* Litt mindre tittel for mobil */
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 80px; /* Mindre logo */
+    }
+
+    /* ✅ Dropdown-meny */
+    .menu-toggle {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: black; /* Endre til ønsket farge */
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        width: 200px;
+        text-align: center;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu li {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu li:last-child {
+        border-bottom: none;
+    }
+
+    .menu a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+    .menu a:hover {
+        background: #eee;
+    }
+}
 
 
 
