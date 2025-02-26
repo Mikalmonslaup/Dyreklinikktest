@@ -146,6 +146,40 @@ nav ul li a:hover {
     gap: 1rem;
     padding: 2rem;
 }
+/* ✅ Standard kort-layout for større skjermer */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 2rem;
+}
+
+/* ✅ Mobilvisning: Viser kortene 2 og 2 */
+@media (max-width: 768px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 kolonner */
+        gap: 10px; /* Juster mellomrom mellom kort */
+        padding: 1rem;
+    }
+
+    .card {
+        width: 100%; /* Kortene fyller hele bredden av grid-kolonnen */
+        text-align: center;
+    }
+
+    .card img {
+        width: 100%; /* Bildet fyller kortet */
+        height: auto;
+        object-fit: cover;
+    }
+
+    .card h3 {
+        font-size: 1rem; /* Tilpass tekststørrelsen */
+        margin-top: 5px;
+    }
+}
 
 .card {
     width: 300px; /* Increased width */
