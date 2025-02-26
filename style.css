@@ -592,43 +592,44 @@ nav ul li a {
         flex-direction: column;
     }
 }
-/* ✅ Mobilvennlig header med sentrert tittel og dropdown-meny */
+/* ✅ Mobilvennlig header */
 @media (max-width: 768px) {
     header {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
-        text-align: center;
         padding: 15px;
         position: relative;
     }
 
     .logo {
+        display: flex;
         flex-direction: column;
         text-align: center;
     }
 
     .logo h1 {
-        font-size: 1.5rem; /* Litt mindre tittel for mobil */
+        font-size: 1.5rem;
         margin-bottom: 10px;
     }
 
     .logo img {
-        width: 80px; /* Mindre logo */
+        width: 80px;
     }
 
-    /* ✅ Dropdown-meny */
+    /* ✅ Stiler for hamburger-knapp */
     .menu-toggle {
-        position: absolute;
-        top: 15px;
-        right: 15px;
         background: none;
         border: none;
         font-size: 1.8rem;
         cursor: pointer;
-        color: black; /* Endre til ønsket farge */
+        color: black;
+        position: absolute;
+        top: 15px;
+        right: 15px;
     }
 
+    /* ✅ Skjuler menyen som standard */
     .menu {
         display: none;
         flex-direction: column;
@@ -640,8 +641,10 @@ nav ul li a {
         border-radius: 5px;
         width: 200px;
         text-align: center;
+        z-index: 100;
     }
 
+    /* ✅ Viser menyen når aktiv */
     .menu.active {
         display: flex;
     }
@@ -665,13 +668,13 @@ nav ul li a {
         text-decoration: none;
         color: black;
         font-weight: bold;
+        display: block;
     }
 
     .menu a:hover {
         background: #eee;
     }
 }
-
 
 
 
