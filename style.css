@@ -502,6 +502,55 @@ footer a:hover {
 nav ul li a {
     color: black !important; /* Endrer alle menylenker til svart */
 }
+/* ✅ Gjør menyen mer mobilvennlig */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Sett menyen i vertikal rekkefølge */
+        align-items: center; /* Sentrer elementene */
+        gap: 10px; /* Gir litt mellomrom */
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    /* ✅ Gjør logo og tittel mer kompakt */
+    .logo {
+        flex-direction: column; /* Sett logo og tittel på hver sin linje */
+        text-align: center;
+    }
+
+    .logo img {
+        width: 80px; /* Gjør logoen mindre */
+    }
+
+    /* ✅ Gjør kortene mer mobilvennlige */
+    .cards {
+        flex-direction: column; /* Sett kortene i én kolonne */
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Gjør kortene bredere for små skjermer */
+    }
+
+    /* ✅ Juster innholdet i behandlinger */
+    .treatment-menu {
+        width: 100%; /* Gjør behandlingsmenyen fullbredde */
+        padding: 1rem; /* Mindre padding */
+    }
+
+    .treatment-category {
+        font-size: 1.2rem; /* Større tekst for bedre trykk */
+        padding: 10px;
+    }
+
+    .treatment-list {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /* Responsivt design */
 @media (max-width: 768px) {
     .team {
