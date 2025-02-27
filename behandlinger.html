@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Behandlinger og Priser - Stavanger Dyreklinikk</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <!-- ✅ Updated Path for Logo -->
+            <img src="images/logo2.png.jpg" alt="Klinikk Logo" style="height: 80px;">
+            <h1 style="color: black;">Stavanger Dyreklinikk</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="bestilling.html">Booking</a></li>
+                <li><a href="index.html">Hjem</a></li>
+                <li><a href="behandlinger.html">Behandlinger og Priser</a></li>
+                <li><a href="Omoss.html">Om Oss</a></li>
+                <li><a href="akutt.html">Akutt Hjelp</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Behandlinger og Priser</h2>
+        <p>Velg en kategori for å se tilgjengelige behandlinger.</p>
+    </section>
+    <section class="treatment-menu">
+        <!-- Clickable Category -->
+        <div class="treatment-category">Vaksinasjon</div>
+        <div class="treatment-list">
+            <div class="treatment-item">Grunnvaksine</div>
+            <div class="treatment-details">
+                <img src="images/vaccine.jpg" alt="Vaksinasjon">
+                <p>Vaksinasjon beskytter kjæledyret ditt mot farlige sykdommer.</p>
+            </div>
+    
+            <div class="treatment-item">Rabiesvaksine</div>
+            <div class="treatment-details">
+                <img src="images/rabies.jpg" alt="Rabies">
+                <p>Rabiesvaksinen er nødvendig for utenlandsreiser med kjæledyr.</p>
+            </div>
+        </div>
+    
+        <!-- Clickable Category -->
+        <div class="treatment-category">Kirurgi</div>
+        <div class="treatment-list">
+            <div class="treatment-item">Kastrering</div>
+            <div class="treatment-details">
+                <img src="images/surgery.jpg" alt="Kastrering">
+                <p>Kastrering gir helsemessige fordeler og forebygger uønskede kull.</p>
+            </div>
+    
+            <div class="treatment-item">Øyekirurgi</div>
+            <div class="treatment-details">
+                <img src="images/eye_surgery.jpg" alt="Øyekirurgi">
+                <p>Øyekirurgi for å behandle skader og sykdommer i øynene.</p>
+            </div>
+        </div>
+    </section>        
+    <section id="treatment-list" class="treatment-list hidden">
+        <div class="treatment-item">
+            <h3>Vaksinasjon</h3>
+            <p>Beskrivelse av vaksinasjon...</p>
+        </div>
+        <div class="treatment-item">
+            <h3>Kirurgi</h3>
+            <p>Beskrivelse av kirurgi...</p>
+        </div>    
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Stavanger Dyreklinikk. Alle rettigheter reservert.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="mobile-menu.js"></script>
+</body>
+</html>

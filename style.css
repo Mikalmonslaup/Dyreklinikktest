@@ -1,0 +1,814 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+}
+
+/* Align logo and text horizontally */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Style the logo image */
+.logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Style the header title */
+.logo h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background-color: #e6f7ff;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #005fa3;
+}
+
+.search-box .emergency-badge {
+    color: red;
+    font-weight: bold;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.quick-access {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+.quick-access .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s;
+}
+
+.quick-access .card:hover {
+    transform: translateY(-10px);
+}
+
+/* Cards Section - Updated */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.card {
+    width: 300px; /* Increased width */
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 400px !important; /* Force increased height */
+    object-fit: cover; /* Ensures image fills space without distortion */
+    border-radius: 8px 8px 0 0;
+}
+
+.card h3 {
+    margin: 1rem 0;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #e6f7ff;
+}
+
+.categories .category {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.categories .category:hover {
+    transform: translateY(-10px);
+}
+
+.categories img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #003366;
+    color: white;
+    margin-top: 40px;
+}
+footer a {
+    color: white;
+    font-size: 24px; /* Adjust size */
+    margin: 0 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #ffcc00; /* Change to any color when hovered */
+}
+/* Behandlinger Page - Treatment Dropdown Styling */
+.treatment-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* Clickable Treatment Categories */
+.treatment-category {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.treatment-category {
+    cursor: pointer; /* Ensures it's clickable */
+    user-select: none; /* Prevents text selection */
+}
+.treatment-category:hover, .treatment-category.active {
+    background-color: #e6f7ff;
+    transform: scale(1.02);
+}
+.treatment-list {
+    display: none !important; /* Ensures it's fully hidden initially */
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-out, max-height 0.3s ease-out;
+}
+
+/* Ensure dropdown appears when .active is applied */
+.treatment-list.active {
+    display: flex !important; /* Forces visibility */
+    opacity: 1 !important; /* Ensures it’s fully visible */
+    max-height: 1000px !important; /* Forces it to expand */
+}
+
+.treatment-item {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.treatment-item:hover {
+    background-color: #f0f8fa;
+}
+
+
+/* Sub-treatment Details (Text + Image) */
+.treatment-details {
+    display: none;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    text-align: center;
+}
+
+.treatment-details img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.treatment-details.active {
+    display: block;
+}
+
+/* Hide treatment details by default */
+.treatment-details {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 5px;
+    text-align: center;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+/* Show treatment details when active */
+.treatment-details.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Style treatment images */
+.treatment-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.treatment-details {
+    display: none;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    text-align: center;
+}
+
+.treatment-details img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Show sub-details when active */
+.treatment-details.active {
+    display: block;
+}
+/* Bestillingsside - Booking Form */
+.booking-form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.booking-form h2 {
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.booking-form p {
+    font-size: 16px;
+    color: #555;
+}
+
+.booking-form label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #003366;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+    border-color: #007acc;
+    outline: none;
+}
+
+.booking-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.booking-form button {
+    width: 100%;
+    padding: 12px;
+    background: #007acc;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.booking-form button:hover {
+    background: #005fa3;
+}
+
+
+/* Responsivt design for mobil */
+@media (max-width: 768px) {
+    .booking-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .booking-form button {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .quick-access, .categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        flex-direction: column;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .logo {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+    
+    /* Hide the navigation menu by default on mobile */
+    header nav ul {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        background-color: #003366; /* Match header background */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        width: 200px;
+        padding: 10px 0;
+        border-radius: 0 0 5px 5px;
+        z-index: 99;
+    }
+    
+    /* Only show menu when it has the show class */
+    header nav ul.show {
+        display: flex;
+    }
+    
+    header nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    header nav ul li a {
+        display: block;
+        padding: 12px 20px;
+        color: white;
+    }
+    
+    header nav ul li a:hover {
+        background-color: #00254d;
+        text-decoration: none;
+    }
+}
+
+/* Desktop menu styling */
+@media (min-width: 769px) {
+    /* Center the menu */
+    header nav {
+        display: flex;
+        justify-content: center;
+    }
+    
+    /* Ensure menu is displayed normally on desktop */
+    header nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+}
+/* REPLACE all previous mobile menu styles with this clean version */
+
+/* Improved mobile menu styles */
+
+/* Position fix for mobile menu button */
+.mobile-menu-toggle {
+    display: none;
+    position: absolute;
+    top: 20px; /* Fixed position from top instead of using transform */
+    right: 15px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 100;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 768px) {
+    header {
+        position: relative;
+        padding-right: 70px; /* Add padding to the header itself */
+    }
+    
+    .logo {
+        width: auto; /* Let logo take its natural width */
+        max-width: calc(100% - 70px); /* Ensure it doesn't overflow */
+    }
+    
+    /* Make text smaller on mobile if needed */
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    /* Show the mobile menu button */
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    /* Hide the navigation menu by default on mobile */
+    header nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 80%; /* Make wider on mobile */
+        max-width: 300px;
+        padding: 0;
+        border-radius: 0 0 5px 5px;
+        z-index: 99;
+    }
+    
+    /* Only show menu when it has the show class */
+    header nav ul.show {
+        display: flex;
+    }
+    
+    header nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+    
+    header nav ul li:last-child {
+        border-bottom: none;
+    }
+    
+    header nav ul li a {
+        display: block;
+        padding: 15px 20px; /* Larger touch targets */
+        color: black;
+        font-size: 16px;
+    }
+    
+    header nav ul li a:hover,
+    header nav ul li a:active {
+        background-color: #f0f0f0;
+    }
+    
+    .logo {
+        padding-right: 50px; /* Make space for the button */
+    }
+    
+    /* Show the mobile menu button */
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    /* Hide the navigation menu by default on mobile */
+    header nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        background-color: #ffffff; /* Match header background */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        width: 200px;
+        padding: 10px 0;
+        border-radius: 0 0 5px 5px;
+        z-index: 99;
+    }
+    
+    /* Only show menu when it has the show class */
+    header nav ul.show {
+        display: flex;
+    }
+    
+    header nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    header nav ul li a {
+        display: block;
+        padding: 12px 20px;
+        color: rgb(0, 0, 0);
+    }
+    
+    header nav ul li a:hover {
+        background-color: #00254d;
+    }
+    
+    /* Other mobile styles */
+    .team {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .emergency-info {
+        width: 90%;
+    }
+    
+    .booking-form {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .booking-form button {
+        font-size: 16px;
+    }
+    
+    .quick-access, .categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+}
+/* Improved treatment categories for mobile */
+.treatment-category {
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    user-select: none; /* Prevents text selection */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on iOS */
+}
+
+/* Make tap targets larger on mobile */
+@media (max-width: 768px) {
+    .treatment-category {
+        padding: 18px 15px;
+        font-size: 1.1em;
+    }
+    
+    .treatment-item {
+        padding: 15px;
+        font-size: 1.05em;
+    }
+    
+    /* Improve treatment list visuals on mobile */
+    .treatment-list.active {
+        display: flex !important;
+        opacity: 1 !important;
+        max-height: none !important; /* Remove height restriction */
+        overflow: visible; /* Ensure content isn't cut off */
+        margin-bottom: 20px;
+    }
+    
+    /* Fix z-index issues */
+    .treatment-list {
+        z-index: 10;
+        position: relative;
+    }
+    
+    .treatment-details {
+        z-index: 11;
+        position: relative;
+    }
+}
+/* Header Color Updates */
+header {
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+}
+
+.logo h1 {
+    color: black;
+}
+
+nav ul li a {
+    color: black;
+}
+
+nav ul li a:hover {
+    color: #007acc; /* Optional: add a hover color for contrast */
+    text-decoration: underline;
+}
+
+footer {
+    background-color: white;
+    color: black;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    header nav ul {
+        background-color: white;
+    }
+    
+    header nav ul li a {
+        color: black;
+    }
+    
+    header nav ul li a:hover {
+        background-color: #f0f0f0;
+    }
+    
+    .mobile-menu-toggle {
+        background: #333;
+        color: white;
+    }
+}/* Header Color Updates */
+header {
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+}
+
+.logo h1 {
+    color: black;
+}
+
+nav ul li a {
+    color: black;
+}
+
+nav ul li a:hover {
+    color: #007acc; /* Optional: add a hover color for contrast */
+    text-decoration: underline;
+}
+
+footer {
+    background-color: white;
+    color: black;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    header nav ul {
+        background-color: white;
+    }
+    
+    header nav ul li a {
+        color: black;
+    }
+    
+    header nav ul li a:hover {
+        background-color: #f0f0f0;
+    }
+    
+    .mobile-menu-toggle {
+        background: #333;
+        color: white;
+    }
+}
+
